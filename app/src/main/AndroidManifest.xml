@@ -11,12 +11,11 @@
         android:label="@string/app_name"
         android:roundIcon="@android:drawable/ic_dialog_info"
         android:supportsRtl="true"
-        android:theme="@style/Theme.EtudIAMad">
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">  <!-- 👈 Changement temporaire -->
 
         <activity
             android:name=".MainActivity"
-            android:exported="true"
-            android:theme="@style/Theme.EtudIAMad">
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
