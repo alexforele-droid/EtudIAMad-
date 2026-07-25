@@ -1,6 +1,6 @@
 plugins {
     id("com.android.application")
-    // Pas de plugin Kotlin
+    // Pas de plugin Kotlin – on utilise Java pur
 }
 
 android {
@@ -21,7 +21,6 @@ android {
         }
     }
 
-    // On utilise Java 8 pour éviter les problèmes avec les anciens téléphones
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
