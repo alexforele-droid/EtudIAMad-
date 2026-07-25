@@ -18,7 +18,7 @@ android {
 
     buildTypes {
         release {
-            minifyEnabled = false   // ← on peut aussi écrire comme ça, avec '='
+            isMinifyEnabled = false   // ✅ la bonne syntaxe
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
