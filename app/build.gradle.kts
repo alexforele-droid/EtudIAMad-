@@ -4,21 +4,28 @@ plugins {
 }
 
 android {
+    // ✅ Le namespace est ICI (hors defaultConfig)
     namespace = "com.etudamada.etudiamad"
     compileSdk = 34
 
     defaultConfig {
+        // ✅ Le applicationId est ICI (à l'intérieur)
         applicationId = "com.etudamada.etudiamad"
         minSdk = 26
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
+        // 👇 OBLIGATOIRE pour ton ZTE 32 bits
+        ndk {
+            abiFilters += listOf("armeabi-v7a", "arm64-v8a")
+        }
     }
 
     buildTypes {
         release {
-            isMinifyEnabled = false   // ✅ la bonne syntaxe
+            isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
