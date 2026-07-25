@@ -7,9 +7,11 @@ import androidx.appcompat.app.AppCompatActivity
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        // On met un texte en dur, pas de layout XML
+
         val textView = TextView(this)
         textView.text = "EtudIAMad fonctionne !"
+        textView.textSize = 24f
+
         setContentView(textView)
     }
 }
