@@ -1,6 +1,6 @@
 plugins {
     id("com.android.application")
-    id("org.jetbrains.kotlin.android")
+    // Pas de plugin Kotlin
 }
 
 android {
@@ -10,39 +10,24 @@ android {
     defaultConfig {
         applicationId = "com.etudamada.etudiamad"
         minSdk = 26
-        targetSdk = 34
+        targetSdk = 29
         versionCode = 1
         versionName = "1.0"
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-
-        // 👇 SEULEMENT 32 BITS (ARMv7)
-        ndk {
-            abiFilters += listOf("armeabi-v7a")
-        }
     }
 
     buildTypes {
         release {
             isMinifyEnabled = false
-            proguardFiles(
-                getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
-            )
         }
     }
 
+    // On utilise Java 8 pour éviter les problèmes avec les anciens téléphones
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_17
-        targetCompatibility = JavaVersion.VERSION_17
-    }
-
-    kotlinOptions {
-        jvmTarget = "17"
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
     }
 }
 
 dependencies {
-    implementation("androidx.core:core-ktx:1.12.0")
-    implementation("androidx.appcompat:appcompat:1.6.1")
-    implementation("com.google.android.material:material:1.11.0")
+    // AUCUNE dépendance externe
 }
