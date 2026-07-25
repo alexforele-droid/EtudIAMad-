@@ -8,6 +8,7 @@ android {
     compileSdk = 34
 
     defaultConfig {
+        // ✅ applicationId est bien à l'intérieur de defaultConfig
         applicationId = "com.etudamada.etudiamad"
         minSdk = 26
         targetSdk = 34
@@ -18,6 +19,7 @@ android {
 
     buildTypes {
         release {
+            // ✅ La syntaxe Kotlin avec '=' et 'isMinifyEnabled'
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
@@ -34,6 +36,12 @@ android {
     kotlinOptions {
         jvmTarget = "17"
     }
+}
+
+dependencies {
+    implementation("androidx.core:core-ktx:1.12.0")
+    implementation("androidx.appcompat:appcompat:1.6.1")
+    implementation("com.google.android.material:material:1.11.0")
 }
 
 dependencies {
