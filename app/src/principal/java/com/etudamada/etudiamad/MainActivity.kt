@@ -1,16 +1,19 @@
-package com.etudamada.etudiamad;
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
-import android.app.Activity;
-import android.os.Bundle;
-import android.widget.TextView;
+    <application
+        android:icon="@android:drawable/ic_dialog_info"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.Material.Light.NoActionBar">
 
-public class MainActivity extends Activity {
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        TextView textView = new TextView(this);
-        textView.setText("Java pur - OK !");
-        textView.setTextSize(30);
-        setContentView(textView);
-    }
-}
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+    </application>
+</manifest>
