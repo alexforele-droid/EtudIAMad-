@@ -5,10 +5,10 @@ plugins {
 
 android {
     namespace = "com.etudamada.etudiamad"
-    applicationId = "com.etudamada.etudiamad"
     compileSdk = 34
 
     defaultConfig {
+        applicationId = "com.etudamada.etudiamad"
         minSdk = 26
         targetSdk = 34
         versionCode = 1
@@ -18,7 +18,7 @@ android {
 
     buildTypes {
         release {
-            minifyEnabled false
+            isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
