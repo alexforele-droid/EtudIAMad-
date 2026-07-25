@@ -1,15 +1,16 @@
-package com.etudamada.etudiamad
+package com.etudamada.etudiamad;
 
-import android.app.Activity
-import android.os.Bundle
-import android.widget.TextView
+import android.app.Activity;
+import android.os.Bundle;
+import android.widget.TextView;
 
-class MainActivity : Activity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        val tv = TextView(this)
-        tv.text = "EtudIAMad fonctionne !"
-        tv.textSize = 30f
-        setContentView(tv)
+public class MainActivity extends Activity {
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        TextView textView = new TextView(this);
+        textView.setText("Java pur - OK !");
+        textView.setTextSize(30);
+        setContentView(textView);
     }
 }
